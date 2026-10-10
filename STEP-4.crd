@@ -1,0 +1,136 @@
+{
+  "version": "1.0",
+  "name": "Enterprise Operations STEP-1",
+  "flows": [
+    {
+      "id": "workflow",
+      "name": "Enterprise operation"
+    }
+  ],
+  "step": {
+    "no": 4,
+    "of": 6,
+    "title": "Human approval",
+    "branch": "step-04-enforce-human-approval-and-authorization",
+    "previous": "STEP-3.crd",
+    "removed": []
+  },
+  "components": [
+    {
+      "id": "be.api",
+      "name": "api",
+      "kind": "function",
+      "side": "backend",
+      "layer": "door",
+      "description": "STEP-1 api learning component",
+      "flows": [
+        "workflow"
+      ],
+      "source": {
+        "file": "app/main.py",
+        "symbol": "accept_work",
+        "lines": [
+          1,
+          60
+        ]
+      },
+      "owner": "enterprise_workflow",
+      "component_reason": "Independently testable responsibility",
+      "status": "observed",
+      "inputs": [],
+      "validations": [],
+      "operations": [],
+      "outputs": [],
+      "attributes": {
+        "step_introduced": 1
+      },
+      "step_change": "unchanged"
+    },
+    {
+      "id": "be.planner",
+      "name": "planner",
+      "kind": "function",
+      "side": "backend",
+      "layer": "service",
+      "description": "Dependency-aware task planning",
+      "flows": [
+        "workflow"
+      ],
+      "source": {
+        "file": "app/planner.py",
+        "symbol": "plan",
+        "lines": [
+          1,
+          20
+        ]
+      },
+      "owner": "enterprise_workflow",
+      "component_reason": "Bounded graph",
+      "status": "observed",
+      "inputs": [],
+      "validations": [],
+      "operations": [],
+      "outputs": [],
+      "attributes": {},
+      "step_change": "unchanged"
+    },
+    {
+      "id": "be.execution",
+      "name": "execution",
+      "kind": "function",
+      "side": "backend",
+      "layer": "service",
+      "description": "execution source unit",
+      "flows": [
+        "workflow"
+      ],
+      "source": {
+        "file": "app/execution.py",
+        "symbol": "Execution.record",
+        "lines": [
+          1,
+          40
+        ]
+      },
+      "owner": "enterprise_workflow",
+      "component_reason": "Isolated domain function",
+      "status": "observed",
+      "inputs": [],
+      "validations": [],
+      "operations": [],
+      "outputs": [],
+      "attributes": {},
+      "step_change": "unchanged"
+    },
+    {
+      "id": "be.approval",
+      "name": "approval",
+      "kind": "function",
+      "side": "backend",
+      "layer": "service",
+      "description": "Approval guard",
+      "flows": [
+        "workflow"
+      ],
+      "source": {
+        "file": "app/approval.py",
+        "symbol": "Approval.require",
+        "lines": [
+          1,
+          20
+        ]
+      },
+      "owner": "enterprise_workflow",
+      "component_reason": "Authorization decision",
+      "status": "observed",
+      "inputs": [],
+      "validations": [],
+      "operations": [],
+      "outputs": [],
+      "attributes": {},
+      "step_change": "added"
+    }
+  ],
+  "dependencies": [],
+  "unresolved": []
+}
