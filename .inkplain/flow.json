@@ -4,7 +4,7 @@
     "slug": "enterprise-operations-multi-agent-coordinator",
     "name": "Enterprise Operations Multi-Agent Coordinator"
   },
-  "current": "content",
+  "current": "done",
   "stages": {
     "intro": {
       "status": "done",
@@ -43,7 +43,23 @@
       "started_at": "2026-10-10T10:27:31.550Z",
       "finished_at": "2026-10-10T10:27:31.550Z",
       "updated_by": "api-key:for-chatgpt-test-2"
+    },
+    "content": {
+      "status": "done",
+      "summary": "Stage 4 completed: 8 categories, 45 active lessons including 18 Overview (16 source-backed What-is), six STEP categories x four items, and three conclusion lessons; verified category counts and representative body blocks, six INKP tabs, zero missing linked docs, GitHub CI 7/7. This is a local educational reference, not production distributed agent infrastructure.",
+      "outputs": {
+        "categories": 8,
+        "items": 45,
+        "overview": 18,
+        "step_lessons": 24,
+        "conclusion": 3,
+        "structural_qa": true,
+        "portal_url": "/practical-case/enterprise-operations-multi-agent-coordinator"
+      },
+      "started_at": "2026-10-10T10:34:42.626Z",
+      "finished_at": "2026-10-10T10:34:42.626Z",
+      "updated_by": "api-key:for-chatgpt-test-2"
     }
   },
-  "updated_at": "2026-10-10T10:27:31.550Z"
+  "updated_at": "2026-10-10T10:34:42.626Z"
 }
