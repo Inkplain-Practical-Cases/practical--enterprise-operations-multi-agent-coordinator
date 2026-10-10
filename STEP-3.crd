@@ -1,0 +1,108 @@
+{
+  "version": "1.0",
+  "name": "Enterprise Operations STEP-1",
+  "flows": [
+    {
+      "id": "workflow",
+      "name": "Enterprise operation"
+    }
+  ],
+  "step": {
+    "no": 3,
+    "of": 6,
+    "title": "execution",
+    "branch": "step-03-track-execution-state-and-validate-resul",
+    "previous": "STEP-2.crd",
+    "removed": []
+  },
+  "components": [
+    {
+      "id": "be.api",
+      "name": "api",
+      "kind": "function",
+      "side": "backend",
+      "layer": "door",
+      "description": "STEP-1 api learning component",
+      "flows": [
+        "workflow"
+      ],
+      "source": {
+        "file": "app/main.py",
+        "symbol": "accept_work",
+        "lines": [
+          1,
+          60
+        ]
+      },
+      "owner": "enterprise_workflow",
+      "component_reason": "Independently testable responsibility",
+      "status": "observed",
+      "inputs": [],
+      "validations": [],
+      "operations": [],
+      "outputs": [],
+      "attributes": {
+        "step_introduced": 1
+      },
+      "step_change": "unchanged"
+    },
+    {
+      "id": "be.planner",
+      "name": "planner",
+      "kind": "function",
+      "side": "backend",
+      "layer": "service",
+      "description": "Dependency-aware task planning",
+      "flows": [
+        "workflow"
+      ],
+      "source": {
+        "file": "app/planner.py",
+        "symbol": "plan",
+        "lines": [
+          1,
+          20
+        ]
+      },
+      "owner": "enterprise_workflow",
+      "component_reason": "Bounded graph",
+      "status": "observed",
+      "inputs": [],
+      "validations": [],
+      "operations": [],
+      "outputs": [],
+      "attributes": {},
+      "step_change": "unchanged"
+    },
+    {
+      "id": "be.execution",
+      "name": "execution",
+      "kind": "function",
+      "side": "backend",
+      "layer": "service",
+      "description": "execution source unit",
+      "flows": [
+        "workflow"
+      ],
+      "source": {
+        "file": "app/execution.py",
+        "symbol": "Execution.record",
+        "lines": [
+          1,
+          40
+        ]
+      },
+      "owner": "enterprise_workflow",
+      "component_reason": "Isolated domain function",
+      "status": "observed",
+      "inputs": [],
+      "validations": [],
+      "operations": [],
+      "outputs": [],
+      "attributes": {},
+      "step_change": "added"
+    }
+  ],
+  "dependencies": [],
+  "unresolved": []
+}
