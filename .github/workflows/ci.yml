@@ -1,0 +1,18 @@
+name: Seven-Branch Python Test Matrix
+on: [push, workflow_dispatch]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        ref: ["main", "step-01-define-multi-role-workflow-contracts", "step-02-delegate-tasks-through-controlled-graph", "step-03-track-execution-state-and-validate-resul", "step-04-enforce-human-approval-and-authorization", "step-05-recover-failures-and-bound-completion", "step-06-simulate-audited-enterprise-operations"]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.ref }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pytest -q
