@@ -1,0 +1,52 @@
+{
+  "version": "1.0",
+  "name": "Enterprise Operations STEP-1",
+  "flows": [
+    {
+      "id": "workflow",
+      "name": "Enterprise operation"
+    }
+  ],
+  "step": {
+    "no": 1,
+    "of": 6,
+    "title": "Define multi-role workflow contracts",
+    "branch": "step-01-define-multi-role-workflow-contracts",
+    "previous": null,
+    "removed": []
+  },
+  "components": [
+    {
+      "id": "be.api",
+      "name": "api",
+      "kind": "function",
+      "side": "backend",
+      "layer": "door",
+      "description": "STEP-1 api learning component",
+      "flows": [
+        "workflow"
+      ],
+      "source": {
+        "file": "app/main.py",
+        "symbol": "accept_work",
+        "lines": [
+          1,
+          60
+        ]
+      },
+      "owner": "enterprise_workflow",
+      "component_reason": "Independently testable responsibility",
+      "status": "observed",
+      "inputs": [],
+      "validations": [],
+      "operations": [],
+      "outputs": [],
+      "attributes": {
+        "step_introduced": 1
+      },
+      "step_change": "added"
+    }
+  ],
+  "dependencies": [],
+  "unresolved": []
+}
