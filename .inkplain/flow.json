@@ -1,0 +1,37 @@
+{
+  "practical_case": {
+    "id": "4ovLTgn6MdlP4QA7z9cd",
+    "slug": "enterprise-operations-multi-agent-coordinator",
+    "name": "Enterprise Operations Multi-Agent Coordinator"
+  },
+  "current": "inkp",
+  "stages": {
+    "intro": {
+      "status": "done",
+      "summary": "Verified Junior FDE case, skill links, seven substantive introduction sections and HTML architecture diagram; cover reused from Media Library.",
+      "started_at": "2026-10-10T09:09:13.003Z",
+      "finished_at": "2026-10-10T09:11:28.797Z",
+      "updated_by": "api-key:for-chatgpt-test-2",
+      "outputs": {
+        "portal_url": "/practical-case/enterprise-operations-multi-agent-coordinator",
+        "level": "junior",
+        "skills_linked": 7,
+        "intro_sections": 7,
+        "cover_reused": true
+      }
+    },
+    "repo": {
+      "status": "done",
+      "summary": "Six cumulative STEP branches and main committed; GitHub Actions seven-branch matrix confirmed 7/7 success.",
+      "outputs": {
+        "steps": 6,
+        "ci_success": 7,
+        "repo_url": "https://github.com/Inkplain-Practical-Cases/practical--enterprise-operations-multi-agent-coordinator"
+      },
+      "started_at": "2026-10-10T10:27:26.511Z",
+      "finished_at": "2026-10-10T10:27:26.511Z",
+      "updated_by": "api-key:for-chatgpt-test-2"
+    }
+  },
+  "updated_at": "2026-10-10T10:27:26.511Z"
+}
