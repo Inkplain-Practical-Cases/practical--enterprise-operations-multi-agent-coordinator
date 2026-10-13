@@ -46,7 +46,7 @@
     },
     "content": {
       "status": "done",
-      "summary": "Stage 4 completed: 8 categories, 45 active lessons including 18 Overview (16 source-backed What-is), six STEP categories x four items, and three conclusion lessons; verified category counts and representative body blocks, six INKP tabs, zero missing linked docs, GitHub CI 7/7. This is a local educational reference, not production distributed agent infrastructure.",
+      "summary": "Source-backed persistence audit completed: Dataclass Execution state and audit list are local simulator memory only. Therefore no STEP-N.erd, ERD tabs or Database lesson is warranted.",
       "outputs": {
         "categories": 8,
         "items": 45,
@@ -54,12 +54,18 @@
         "step_lessons": 24,
         "conclusion": 3,
         "structural_qa": true,
-        "portal_url": "/practical-case/enterprise-operations-multi-agent-coordinator"
+        "portal_url": "/practical-case/enterprise-operations-multi-agent-coordinator",
+        "erd_audit_complete": true,
+        "erd_applicable_steps": [],
+        "erd_not_applicable": true,
+        "erd_lessons_created": 0,
+        "erd_item_title": "Database (Entity) Relations",
+        "erd_audit_note": "Dataclass Execution state and audit list are local simulator memory only."
       },
       "started_at": "2026-10-10T10:34:42.626Z",
       "finished_at": "2026-10-10T10:34:42.626Z",
       "updated_by": "api-key:for-chatgpt-test-2"
     }
   },
-  "updated_at": "2026-10-10T10:34:42.626Z"
+  "updated_at": "2026-10-13T15:14:07.858Z"
 }
