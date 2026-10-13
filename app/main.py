@@ -8,3 +8,7 @@ class WorkRequest(BaseModel):
 @app.post('/work')
 def accept_work(req:WorkRequest):
     return {'request_id':req.request_id,'state':'accepted','action':req.action}
+
+# Persist coordinator HTTP operation outcomes independently of simulation state.
+from app.core.request_audit_middleware import RequestAuditMiddleware
+app.add_middleware(RequestAuditMiddleware)
